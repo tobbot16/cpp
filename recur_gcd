@@ -1,0 +1,27 @@
+
+#include <iostream>
+using namespace std;
+
+int gcd(int i, int j){
+    int tmp;
+    if(i < j){
+        tmp = i;
+        i = j;
+        j = tmp;
+    }
+    if(i % j == 0)
+        return j;
+    else 
+        return gcd(i, i%j);
+    
+}
+
+int main() {
+
+    int num1, num2;
+    cin>>num1>>num2;
+    
+    cout<<gcd(num1, num2);
+
+    return 0;
+}
