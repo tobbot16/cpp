@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int recur(int i){
+    if(i == 1)
+        return i;
+    else
+        return i * recur(i - 1);
+}
+
+int main() {
+
+
+    int num;
+    cin>>num;
+    cout<<recur(num);
+
+    return 0;
+}
